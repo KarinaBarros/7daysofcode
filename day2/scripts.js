@@ -49,9 +49,7 @@ function submitButton(){
     show.style.display = 'block';
 
     document.getElementById("linguagem2").innerText = 'Você gosta de estudar ' + submitLinguagem + '?';
-
 }
-
 function submitButton2(){
     var submitOption =document.getElementById("option").value;
     var submitText2 = "Muito bom! Continue estudando e você terá muito sucesso.";
@@ -68,3 +66,15 @@ function submitButton2(){
         document.getElementById('option').value = "";
     }
 }
+
+document.getElementById('linguagem').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+      submitButton();
+    }
+  });
+
+  document.getElementById('option').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+      submitButton2();
+    }
+  });
