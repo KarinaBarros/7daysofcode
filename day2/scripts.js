@@ -43,11 +43,11 @@ function submitButton(){
     var submitLinguagem = document.getElementById("linguagem").value;
     var submitText = "Olá "+ submitNome +", você tem "+submitIdade+" anos e já está aprendendo " +submitLinguagem+ "!";
     var show = document.getElementById("show");
-
+    //Atribuindo o texto a "text"
     document.getElementById("text").innerText = submitText;
-
+    //mostrando a div "show"
     show.style.display = 'block';
-
+    //Atribuindo o texto em "linguagem2"
     document.getElementById("linguagem2").innerText = 'Você gosta de estudar ' + submitLinguagem + '?';
 }
 function submitButton2(){
@@ -55,6 +55,7 @@ function submitButton2(){
     var submitText2 = "Muito bom! Continue estudando e você terá muito sucesso.";
     var submitText3 = "Ahh que pena... Já tentou aprender outras linguagens?"
     var submitText4 = "Você digitou um número inválido, tente novamente."
+    //Condição de respostas do input que serão exibidas em "text2"
     if (submitOption == 1){
         document.getElementById("text2").innerText = submitText2;
     }
@@ -66,7 +67,7 @@ function submitButton2(){
         document.getElementById('option').value = "";
     }
 }
-
+//Atribuindo a tecla enter as funções
 document.getElementById('linguagem').addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
       submitButton();
