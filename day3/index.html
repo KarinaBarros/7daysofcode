@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day3</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form">
+        <div class="form1">
+            <div class="title">
+                <h2>Você gortaria de seguir em qual área?</h2>
+            </div>
+            <div class="submit">
+               <label for="option">Digite 1 para Front-End e 2 para Back-End:</label>
+               <input type="text" id="option" name="option">
+               <button onclick="submitButton()">Ok</button>
+            </div>
+        </div>
+        <div class="form2" id="front">
+            <div class="title">
+                <p >Voce escolheu a área de Front-End</p>
+                <h2>O que você gostaria de aprender?</h2>
+            </div>
+            <div class="submit">
+                <label for="option2">Digite 1 para React ou 2 para Vue:</label>
+                <input type="text" id="option2" name="option2">
+                <button onclick="submitButton2()">Ok</button>
+             </div>
+        </div>
+        <div class="form2" id="back">
+            <div class="title">
+                <p >Voce escolheu a área de Back-End</p>
+                <h2>O que você gostaria de aprender?</h2>
+            </div>
+            <div class="submit">
+                <label for="option3">Digite 1 para C# ou 2 para Java:</label>
+                <input type="text" id="option3" name="option3">
+                <button onclick="submitButton2()">Ok</button>
+             </div>
+        </div>
+        <div class="form2" id="question">
+            <div class="title">
+                <p id="area"></p>
+                <h2>O que você gostaria de seguir?</h2>
+            </div>
+            <div class="submit">
+                <label for="option4" id="frontBack"></label>
+                <input type="text" id="option4" name="option4">
+                <button onclick="submitButton3()">Ok</button>
+             </div>
+        </div>
+        <div class="form2" id="looping">
+            <div class="title">
+                <p id="area2"></p>
+            </div>
+            <div class="submit">
+                <label for="iLooping">Digite o nome da linguagem e clique em ok:</label>
+                <input type="text" id="iLooping" name="iLooping">
+                <button onclick="submitButton4()">Ok</button>
+            </div>
+            <div class="submit">
+                <p>Quando terminar de adicionar linguagens clique em pronto.</p>
+                <button onclick="submitButton5()" class="pronto">pronto</button>
+                <p id="area3"></p>
+            </div>
+        </div>
+        <div class="form2" id="listaDesejo">
+            <div class="title">
+                <h2>Lista de desejos!</h2>
+                <div id="lista-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
