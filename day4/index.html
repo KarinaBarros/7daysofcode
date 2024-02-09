@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day4</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="form">
+        <div class="form1" id="jogo">
+            <div class="title">
+            <h2>Tente adivinhar o número que estou pensando!</h2>
+            <h2>Você tem 3 tentativas.</h2>
+            </div>
+            <div class="submit">
+                <label for="submit-number">Escolha um número de 1 a 10 e clique em ok:</label>
+                <input type="text" id="submit-number" name="submit-number">
+                <button onclick="submitButton()">ok</button>
+            </div>
+
+        </div>
+        <div class="form1" id="continue">
+            <div class="submit">
+                <h2>Clique em ok para tentar novamente.</h2>
+                <button onclick="submitButton2()">ok</button>
+            </div>
+
+        </div>
+        <div id="image">
+            <h2 class="text-image" id="acertou"></h2>
+            <img src="./applause.png" alt="parabéns">
+        </div>
+    </div>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
