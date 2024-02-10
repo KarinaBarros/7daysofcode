@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form">
+        <div class="form1" id="forms">
+            <div class="title">
+                <h2>Vamos montar sua lista de compras!</h2>
+                <p>Escreva o nome do produto na sua devida categoria e clique em ok. Você pode adicionar quantos produtos quiser. Quando terminar clique em pronto e organizarei a lista para você.</p>
+            </div>
+        </div>
+        
+            <div class="form1" id="forms2">
+                <div class="submit">
+                    <label for="hortifruti">Hotifruti:</label>
+                    <input type="text" id="hortifruti" name="hortifruti">
+                    <button onclick="submitHortifruti()">ok</button>
+                </div>
+                <div class="submit">
+                    <label for="bebidas">Bebidas:</label>
+                    <input type="text" id="bebidas" name="bebidas">
+                    <button onclick="submitBebidas()">ok</button>
+                </div>
+                <div class="submit">
+                    <label for="alimentos">Alimentos:</label>
+                    <input type="text" id="alimentos" name="alimentos">
+                    <button onclick="submitAlimentos()">ok</button>
+                </div>
+                <div class="submit">
+                    <label for="açougue">Açougue:</label>
+                    <input type="text" id="açougue" name="açougue">
+                    <button onclick="submitAçougue()">ok</button>
+                </div>
+                <div class="submit">
+                    <label for="limpeza">Produtos de limpeza:</label>
+                    <input type="text" id="limpeza" name="limpeza">
+                    <button onclick="submitLimpeza()">ok</button>
+                </div>
+                <div class="submit">
+                    <label for="higiene">Higiene pessoal:</label>
+                    <input type="text" id="higiene" name="higiene">
+                    <button onclick="submitHigiene()">ok</button>
+                </div>
+                <div class="title">
+                    <button onclick="pronto()">pronto</button>
+                </div>
+            </div>
+        
+    </div>
+    
+        <div id="forms3">
+                <p id="print-hortifruti"></p>
+                <p id="print-bebidas"></p>
+                <p id="print-alimentos"></p>
+                <p id="print-açougue"></p>
+                <p id="print-limpeza"></p>
+                <p id="print-higiene"></p>
+        </div>
+    
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>
