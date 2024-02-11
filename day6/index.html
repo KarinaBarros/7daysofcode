@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day 5</title>
+    <title>Day 6</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -59,6 +59,32 @@
                 <p id="print-limpeza"></p>
                 <p id="print-higiene"></p>
         </div>
+
+        <div class="form1" id="forms4">
+            <div class="title">
+                <h2>Gostaria de adicionar ou remover algum item da lista? </h2>
+                <p>Digite 1 para adicionar ou 2 para remover.</p>
+            </div>
+            <div class="submit">
+                <input type="text" id="option" name="option">
+                <button onclick="optionAdd()">Ok</button>
+            </div>
+        </div>
+
+        <div class="form1" id="forms5">
+            <div class="title">
+                <h2>Digite o nome do ítem a ser excluido e clique em ok! </h2>
+                <p>Quando tiver terminado clique em pronto.</p>
+            </div>
+            <div class="submit">
+                <input type="text" id="item-delete" name="item-delete">
+                <button onclick="delet1()">Ok</button>
+            </div>
+            <button onclick="delet2()">pronto</button>
+        </div>
+
+        
+
     </div>
     
 
