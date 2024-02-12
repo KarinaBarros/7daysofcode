@@ -40,54 +40,120 @@ var printLimpeza = document.getElementById("print-limpeza");
 var printHigiene = document.getElementById("print-higiene");
 var arrays = [aHortifruti, aBebidas, aAlimentos, aAçougue, aLimpeza, aHigiene];
 
+function verifica(novoItem, arrays) {
+    for (var i = 0; i < arrays.length; i++) {
+        if (arrays[i].includes(novoItem)) {
+            return true;
+        }
+    }
+    return false;
+}
 
 function submitHortifruti(){
+
     var hortifruti = document.getElementById("hortifruti").value;
+    if (verifica(hortifruti, arrays)) {
+        alert("Este item já está na lista!");
+        document.getElementById("hortifruti").value = "";
+        return;
+    }
+    if (hortifruti.trim() !== ""){
     aHortifruti.push(hortifruti);
     document.getElementById("hortifruti").value = "";
     console.log("aHortifruti: ", aHortifruti);
     printHortifruti.textContent = "Hortifruti: " + aHortifruti.join(', ');
-
+    }
+    else{
+        alert("Escreva o nome do item!");
+    }
 }
 
 function submitBebidas(){
     var bebidas = document.getElementById("bebidas").value;
+    if (verifica(bebidas, arrays)) {
+        alert("Este item já está na lista!");
+        document.getElementById("bebidas").value = "";
+        return;
+    }
+    if (bebidas.trim() !== ""){
     aBebidas.push(bebidas);
     document.getElementById("bebidas").value = "";
     console.log("aBebidas: ", aBebidas);
     printBebidas.textContent = "Bebidas: " + aBebidas.join(', ');
+    }
+    else{
+        alert("Escreva o nome do item!");
+    }
 }
 
 function submitAlimentos(){
     var alimentos = document.getElementById("alimentos").value;
+    if (verifica(alimentos, arrays)) {
+        alert("Este item já está na lista!");
+        document.getElementById("alimentos").value = "";
+        return;
+    }
+    if (alimentos.trim() !== ""){
     aAlimentos.push(alimentos);
     document.getElementById("alimentos").value = "";
     console.log("aAlimentos: ", aAlimentos);
     printAlimentos.textContent = "Alimentos: " + aAlimentos.join(', ');
+    }
+    else{
+        alert("Escreva o nome do item!");
+    }
 }
 
 function submitAçougue(){
     var açougue = document.getElementById("açougue").value;
+    if (verifica(açougue, arrays)) {
+        alert("Este item já está na lista!");
+        document.getElementById("açougue").value = "";
+        return;
+    }
+    if (açougue.trim() !== ""){
     aAçougue.push(açougue);
     document.getElementById("açougue").value = "";
     console.log("aAçougue: ", aAçougue);
     printAçougue.textContent = "Açougue: " + aAçougue.join(', ');
-}
+    }
+    else{
+        alert("Escreva o nome do item!");
+    }}
 
 function submitLimpeza(){
     var limpeza = document.getElementById("limpeza").value;
+    if (verifica(limpeza, arrays)) {
+        alert("Este item já está na lista!");
+        document.getElementById("limpeza").value = "";
+        return;
+    }
+    if (limpeza.trim() !== ""){
     aLimpeza.push(limpeza);
     document.getElementById("limpeza").value = "";
     console.log("aLimpeza: ", aLimpeza);
     printLimpeza.textContent = "Limpeza: " + aLimpeza.join(', ');
+    }else{
+        alert("Escreva o nome do item!");
+    }
 }
 
 function submitHigiene(){
     var higiene = document.getElementById("higiene").value;
+    if (verifica(higiene, arrays)) {
+        alert("Este item já está na lista!");
+        document.getElementById("higiene").value = "";
+        return;
+    }
+    if (higiene.trim() !== ""){
     aHigiene.push(higiene);
     document.getElementById("higiene").value = "";
     console.log("aHigiene: ", aHigiene);
     printHigiene.textContent = "Higiene: " + aHigiene.join(', ');
+    }
+    else{
+        alert("Escreva o nome do item!");
+    }
 }
 
 function pronto(){
@@ -196,6 +262,10 @@ function delet2(){
 }
 
 function imprimir(){
+    for (var i = 0; i < arrays.length; i++) {
+        var test = arrays[i];
+
+        if (test.length > 0){
     var conteudoDiv = document.getElementById('print').innerHTML;
     var janelaImpressao = window.open('', '', 'width=600,height=600');
     
@@ -205,9 +275,14 @@ function imprimir(){
     
     janelaImpressao.document.close();
     janelaImpressao.print();
-
-}
+    }
+    else{
+        alert("Adicione itens a sua lista para poder imprimir!");
+    }
+}}
 
 function newList(){
+    var resposta = window.confirm("Você tem certeza que deseja recarregar a página? Você vai perder todos os itens da sua lista atual!");
+  if (resposta) {
     location.reload();
-}
+}}
