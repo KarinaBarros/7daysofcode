@@ -28,7 +28,7 @@ body{
 }
 
 #captura{
-    width: 23.3rem;
+    width: 21rem;
     font-size: 40px;
     text-align: end;
     caret-color: transparent;
@@ -45,6 +45,7 @@ body{
   .buttons{
     display: flex;
     flex-direction: row;
+    padding: 0 20px;
   }
   
   .button-numbers{
