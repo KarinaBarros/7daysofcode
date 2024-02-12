@@ -131,6 +131,7 @@ function optionAdd(){
 
 }
 
+
 function delet1() {
     var option = document.getElementById("item-delete").value;
     var deleted = false;
@@ -146,12 +147,41 @@ function delet1() {
     }
 
     if (deleted) {
-        printHortifruti.textContent = "Hortifruti: " + aHortifruti.join(', ');
-        printBebidas.textContent = "Bebidas: " + aBebidas.join(', ');
-        printAlimentos.textContent = "Alimentos: " + aAlimentos.join(', ');
-        printAçougue.textContent = "Açougue: " + aAçougue.join(', ');
-        printLimpeza.textContent = "Limpeza: " + aLimpeza.join(', ');
-        printHigiene.textContent = "Higiene: " + aHigiene.join(', ');
+        if (aHortifruti.length > 0) {
+            printHortifruti.textContent = "Hortifruti: " + aHortifruti.join(', ');
+        } else {
+            printHortifruti.textContent = "";
+        }
+    
+        if (aBebidas.length > 0) {
+            printBebidas.textContent = "Bebidas: " + aBebidas.join(', ');
+        } else {
+            printBebidas.textContent = "";
+        }
+    
+        if (aAlimentos.length > 0) {
+            printAlimentos.textContent = "Alimentos: " + aAlimentos.join(', ');
+        } else {
+            printAlimentos.textContent = "";
+        }
+    
+        if (aAçougue.length > 0) {
+            printAçougue.textContent = "Açougue: " + aAçougue.join(', ');
+        } else {
+            printAçougue.textContent = "";
+        }
+    
+        if (aLimpeza.length > 0) {
+            printLimpeza.textContent = "Limpeza: " + aLimpeza.join(', ');
+        } else {
+            printLimpeza.textContent = "";
+        }
+    
+        if (aHigiene.length > 0) {
+            printHigiene.textContent = "Higiene: " + aHigiene.join(', ');
+        } else {
+            printHigiene.textContent = "";
+        }
         document.getElementById("item-delete").value = "";
     } else {
         alert("O item a ser excluído não foi encontrado.");
@@ -163,4 +193,21 @@ function delet2(){
     forms5.style.display = "none";
     forms4.style.display = "block";
 
+}
+
+function imprimir(){
+    var conteudoDiv = document.getElementById('print').innerHTML;
+    var janelaImpressao = window.open('', '', 'width=600,height=600');
+    
+    janelaImpressao.document.write('<html><head><title>Imprimir Div</title></head><body>');
+    janelaImpressao.document.write(conteudoDiv);
+    janelaImpressao.document.write('</body></html>');
+    
+    janelaImpressao.document.close();
+    janelaImpressao.print();
+
+}
+
+function newList(){
+    location.reload();
 }
