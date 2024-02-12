@@ -269,7 +269,7 @@ function imprimir(){
     var conteudoDiv = document.getElementById('print').innerHTML;
     var janelaImpressao = window.open('', '', 'width=600,height=600');
     
-    janelaImpressao.document.write('<html><head><title>Imprimir Div</title></head><body>');
+    janelaImpressao.document.write('<html><head><title>Lista de compras</title></head><body>');
     janelaImpressao.document.write(conteudoDiv);
     janelaImpressao.document.write('</body></html>');
     
