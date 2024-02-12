@@ -1,0 +1,76 @@
+body{
+    background-color: black;
+    font-family: "Roboto", sans-serif;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1vh;
+}
+
+.calculadora{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(87, 87, 83);
+    width: 25rem;
+    padding: 15px;
+    border-radius: 10px;
+   
+}
+
+.input{
+    display: flex;
+    padding: 20px 0;
+}
+
+#captura{
+    width: 23.3rem;
+    font-size: 40px;
+    text-align: end;
+    caret-color: transparent;
+    background-color: rgb(235, 238, 241);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+*:focus {
+    outline: none;
+  }
+
+  .buttons{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .button-numbers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .numbers{
+    width: calc(25% - 10px); 
+    margin-bottom: 15px;
+    background-color:rgb(235, 238, 241);
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 40px;
+    border-radius: 5px;
+  }
+
+  .ac-back{
+    width:calc(50% - 10px);
+    margin-bottom: 15px;
+    background-color:rgb(235, 238, 241);
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 40px;
+    border-radius: 5px;
+
+  }
+  

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 7</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+</head>
+<body>
+
+    <div class="main">
+        <div class="calculadora">
+            <div class="input">
+                <input type="text" id="captura" name="captura" readonly>
+            </div>
+            <div class="buttons">
+                <div class="button-numbers">
+                    <button class="numbers" onclick="setValor(7)">7</button>
+                    <button class="numbers" onclick="setValor(8)">8</button>
+                    <button class="numbers" onclick="setValor(9)">9</button>
+                    <button class="numbers" onclick="setOperacao('+')"><strong>+</strong></button>
+                    <button class="numbers" onclick="setValor(4)">4</button>
+                    <button class="numbers" onclick="setValor(5)">5</button>
+                    <button class="numbers" onclick="setValor(6)">6</button>
+                    <button class="numbers" onclick="setOperacao('-')"><strong>-</strong></button>
+                    <button class="numbers" onclick="setValor(1)">1</button>
+                    <button class="numbers" onclick="setValor(2)">2</button>
+                    <button class="numbers" onclick="setValor(3)">3</button>
+                    <button class="numbers" onclick="setOperacao('*')"><strong>x</strong></button>
+                    <button class="numbers" onclick="setValor(0)">0</button>
+                    <button class="numbers" onclick="setValor('.')">,</button>
+                    <button class="numbers" onclick="setResultado()"><strong>=</strong></button>
+                    <button class="numbers" onclick="setOperacao('/')"><strong>/</strong></button>
+                    <button class="ac-back" onclick="ac()"><strong>ac</strong></button>
+
+                    <button class="ac-back" onclick="backspace()">
+                        <i class="fa-solid fa-delete-left"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script src="https://kit.fontawesome.com/4b43d49328.js" crossorigin="anonymous"></script>
+</body>
+</html>

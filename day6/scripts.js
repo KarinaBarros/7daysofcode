@@ -39,7 +39,6 @@ var printAçougue = document.getElementById("print-açougue");
 var printLimpeza = document.getElementById("print-limpeza");
 var printHigiene = document.getElementById("print-higiene");
 var arrays = [aHortifruti, aBebidas, aAlimentos, aAçougue, aLimpeza, aHigiene];
-var printElements = [printHortifruti, printBebidas, printAlimentos, printAçougue, printLimpeza, printHigiene];
 
 
 function submitHortifruti(){
@@ -95,14 +94,6 @@ function pronto(){
     forms.style.display = "none";
     forms2.style.display = "none";
 
-
-    printHortifruti.textContent = "Hortifruti: " + aHortifruti.join(', ');
-    printBebidas.textContent = "Bebidas: " + aBebidas.join(', ');
-    printAlimentos.textContent = "Alimentos: " + aAlimentos.join(', ');   
-    printAçougue.textContent = "Açougue: " + aAçougue.join(', ');    
-    printLimpeza.textContent = "Limpeza: " + aLimpeza.join(', ');    
-    printHigiene.textContent = "Higiene: " + aHigiene.join(', ');
-
     forms3.style.display = "block";
     forms4.style.display = "block";
 }
@@ -127,7 +118,7 @@ function optionAdd(){
         var hasElements = arrays.some(array => array.length > 0);
 
         if (!hasElements) {
-            alert("Não há elementos nas arrays para continuar.");
+            alert("Adicione um item para continuar.");
             forms5.style.display = "none";
             forms4.style.display = "block";
             return;
